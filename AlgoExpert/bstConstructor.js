@@ -51,7 +51,20 @@ class BST {
 		return this
   }
 
-  contains(){}
+  contains(value){
+    let boolean = false
+    if(value === this.value) return true
+
+		if(value < this.value && this.left !== null) {
+			boolean = this.left.contains(value);
+    }
+
+    if(value > this.value && this.right !==null) {
+			boolean = this.right.contains(value)
+    }
+
+		return boolean
+  }
 
   remove(){}
 }
