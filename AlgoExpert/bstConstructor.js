@@ -37,7 +37,19 @@ class BST {
     this.right = null;
   }
 
-  insert(){}
+  insert(value){
+    if(value < this.value) {
+			if(this.left === null) this.left = new BST (value)
+			else this.left.insert(value)
+    }
+
+    if(value >= this.value) {
+			if(this.right === null) this.right = new BST (value)
+			else this.right.insert(value)
+		}
+
+		return this
+  }
 
   contains(){}
 
