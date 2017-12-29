@@ -31,7 +31,11 @@ Sample output (after searching for 15): True
 */
 
 class BST {
-  constructor(){}
+  constructor(){
+    this.value = value;
+    this.left = null;
+    this.right = null;
+  }
 
   insert(){}
 
