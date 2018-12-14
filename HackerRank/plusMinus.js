@@ -45,6 +45,7 @@
 // There are  positive numbers,  negative numbers, and  zero in the array. 
 // The proportions of occurrence are positive: , negative:  and zeros: .
 
+//initial function counts how many postive, negative, and zeros there are
 function plusMinus(arr) {
     let positive = 0
     let negative = 0
@@ -57,6 +58,7 @@ function plusMinus(arr) {
     getDecimals(positive, negative, zero, arr.length)
 }
 
+//calculates the ratio between the number of positive, negative, and zeros compared to the overall amount of numbers in the array
 function getDecimals(positive, negative, zero, length) {
     const positiveDecimal = positive / length
     const negativeDecimal = negative / length
@@ -64,6 +66,7 @@ function getDecimals(positive, negative, zero, length) {
     printDecimals(positiveDecimal, negativeDecimal, zeroDecimal)
 }
 
+//prints out the ratio to the 6th decimal
 function printDecimals(positive, negative, zero) {
     for (let i = 0; i < arguments.length; i++) {
         console.log(arguments[i].toFixed(6))
