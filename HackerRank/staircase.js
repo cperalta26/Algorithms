@@ -60,7 +60,7 @@ function staircase(n) {
 }
 
 
-function staircaseRecursion (numOfRows, hashtags="", numOfSpaces=0, spaces="", staircase="") {
+const staircaseRecursion = (numOfRows, hashtags="", numOfSpaces=0, spaces="", staircase="") => {
     if ( numOfRows === 0) {
         return ""
     } else {
