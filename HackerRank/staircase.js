@@ -58,3 +58,23 @@ function staircase(n) {
     }
     console.log(string)
 }
+
+
+function staircaseRecursion (numOfRows, hashtags="", numOfSpaces=0, spaces="", staircase="") {
+    if ( numOfRows === 0) {
+        return ""
+    } else {
+        for ( let s = 0; s < numOfSpaces; s++) {
+            spaces += " "
+        }
+        numOfSpaces += 1
+        for ( let h = 0; h < numOfRows; h++ ) {
+            hashtags +=  "#"
+        }
+        staircase = staircaseRecursion(numOfRows - 1, "", numOfSpaces) + spaces + hashtags
+    }
+    return staircase + "\n"
+}
+
+//staircase(6)
+console.log(staircaseRecursion(6))
