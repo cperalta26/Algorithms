@@ -6,8 +6,8 @@ It’s guaranteed that array contains more than 3 numbers.
 
 The tests contain some very huge arrays, so think about performance.
 
-'''This is the first kata in series:
-
+This is the first kata in series:
+'''
 
 
 def find_uniq(arr):
@@ -29,3 +29,4 @@ def find_uniq(arr):
     find_uniq([ 1, 1, 1, 2, 1, 1 ])
     #find_uniq([ 0, 0, 0.55, 0, 0 ])
     #find_uniq([ 3, 10, 3, 3, 3 ])
+
