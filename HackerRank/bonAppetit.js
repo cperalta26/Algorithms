@@ -65,3 +65,24 @@ Explanation 1
 Anna didn't eat item bill[1]=10, but she shared the rest of the items with Brian. 
 The total cost of the shared items is 3 + 2 + 9 and, split in half, the cost per person is 
 bactual = 7. Because bactual = bchared = 7, we print Bon Appetit on a new line. */
+const bonAppetit = (bill, k, b) => {
+  //calculate how much Anna owes
+  let amountAnnaOwes = 0
+  bill.forEach((amount, index) => {
+   if (index !== k) {
+       amountAnnaOwes += amount
+   } 
+  })
+  amountAnnaOwes = amountAnnaOwes/2
+  //check if the amount anna owes is the same amount brian calculates
+  ////if it is console.log Bon Bon Appetit
+  ////else console.log the amount Brian owes anna
+  if (amountAnnaOwes === b) {
+   console.log('Bon Appetit')
+  } else {
+   console.log(b - amountAnnaOwes)
+  }
+}
+
+bonAppetit([3, 10, 2, 9], 1, 7)
+bonAppetit([3, 10, 2, 9], 1, 12)
