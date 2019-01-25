@@ -52,3 +52,19 @@ Sum across the secondary diagonal: 4 + 5 + 10 = 19
 Difference: |4 - 19| = 15
 
 Note: |x| is the absolute value of x */
+
+var matrix = [[1,2,3], [4,5,6], [9,8,9]]
+
+const dig = arr => {
+  let leftDiagonalSum = 0
+  let rightDiagonalSum = 0
+  const lastIndex = arr.length - 1
+
+  for(let i = 0; i < arr.length; i++) {
+    leftDiagonalSum += arr[i][i]
+    rightDiagonalSum+= arr[i][lastIndex - i]
+  }
+  console.log(`leftDiagonalSum ${leftDiagonalSum}, rightDiagonalSum ${rightDiagonalSum}`)
+}
+
+dig(matrix)
